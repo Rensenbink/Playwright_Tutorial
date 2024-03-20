@@ -28,7 +28,7 @@
       [
         "html",
         {
-          "open": "never"
+          "open": "on-failure"
         }
       ]
     ],
@@ -47,7 +47,7 @@
         "testDir": "C:/Git/Playwright_Tutorial",
         "testIgnore": [],
         "testMatch": [
-          "tests/recorded.test.ts"
+          "tests/basicInteractions.test.ts"
         ],
         "timeout": 30000
       }
@@ -60,14 +60,14 @@
   },
   "suites": [
     {
-      "title": "tests\\recorded.test.ts",
-      "file": "tests/recorded.test.ts",
+      "title": "tests\\basicInteractions.test.ts",
+      "file": "tests/basicInteractions.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "test",
-          "ok": false,
+          "title": "Interaction with inputs",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -79,49 +79,100 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30009,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 1851,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      "text": "Please enter your Message\n"
                     },
                     {
-                      "location": {
-                        "file": "C:\\Git\\Playwright_Tutorial\\tests\\recorded.test.ts",
-                        "column": 51,
-                        "line": 8
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByRole('link', { name: 'Login' })\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[32m\"//a[@data-toggle='dropdown']//span[contains(.,'My account')]\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  7 |\u001b[39m   )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"link\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Login\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"E-Mail Address\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m     \u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"E-Mail Address\"\u001b[39m)\u001b[0m\n\n\u001b[2m    at C:\\Git\\Playwright_Tutorial\\tests\\recorded.test.ts:8:51\u001b[22m"
+                      "text": "Before entering data: \n"
+                    },
+                    {
+                      "text": "After entering data: Hi Rens\n"
                     }
                   ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-03-20T20:45:59.445Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8550347d925177e1da7-c5e3138422ba8fc6e90a",
+          "file": "tests/basicInteractions.test.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Sum",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 1671,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "667\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-03-20T20:46:01.581Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8550347d925177e1da7-80d1741a21c1ce94ae4f",
+          "file": "tests/basicInteractions.test.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "Checkbox",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 1174,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-03-05T15:16:41.778Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Git\\Playwright_Tutorial\\test-results\\tests-recorded-test\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Git\\Playwright_Tutorial\\test-results\\tests-recorded-test\\video.webm"
-                    }
-                  ]
+                  "startTime": "2024-03-20T20:46:03.255Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "aeb89487b60598200775-43f81897c6d5d1a76b28",
-          "file": "tests/recorded.test.ts",
-          "line": 3,
+          "id": "e8550347d925177e1da7-382f133cb114237afd80",
+          "file": "tests/basicInteractions.test.ts",
+          "line": 39,
           "column": 5
         }
       ]
@@ -129,11 +180,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-05T15:16:41.447Z",
-    "duration": 31831.46,
-    "expected": 0,
+    "startTime": "2024-03-20T20:45:58.898Z",
+    "duration": 5858.606,
+    "expected": 3,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

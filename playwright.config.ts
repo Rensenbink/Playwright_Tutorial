@@ -1,13 +1,13 @@
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testMatch: ["tests/recorded.test.ts"],
+  testMatch: ["tests/basicInteractions.test.ts"],
   use: {
     headless: false,
     screenshot: "only-on-failure",
     video: "retain-on-failure",
   },
-  retries: 2,
+  retries: 0,
   reporter: [
     ["dot"],
     [
@@ -19,7 +19,7 @@ export default defineConfig({
     [
       "html",
       {
-        open: "never",
+        open: "on-failure",
       },
     ],
   ],
